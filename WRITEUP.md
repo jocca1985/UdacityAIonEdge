@@ -12,7 +12,7 @@ Custom layers are needed for example when there is need to use some custom activ
 
 ## Comparing Model Performance
 
-For comparison of models I used accuracy for metrics. I tried extracting frames from the given example video and forming test set out of it. With the test created out of given video I tried measuring FP and TP rate so that I can get recall and precision. The model I chosen at the end had:
+For comparison of models I used accuracy for metrics (with fixed threshold). First tried extracting frames from the given example video and forming test set out of it. With the test created out of given video I tried measuring FP and TP rate. The model I chosen at the end had:
 2% of false positives
 96% of true positives with fixed threshold of 0.25.
 
