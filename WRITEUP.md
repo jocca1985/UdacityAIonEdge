@@ -12,13 +12,18 @@ Custom layers are needed for example when there is need to use some custom activ
 
 ## Comparing Model Performance
 
-For comparison of models I used accuracy for metrics. I tried extracting frames from the given example video and forming test set out of it. 
+For comparison of models I used accuracy for metrics. I tried extracting frames from the given example video and forming test set out of it. With the test created out of given video I tried measuring FP and TP rate so that I can get recall and precision. The model I chosen at the end had:
+2% of false positives
+96% of true positives with fixed threshold of 0.25.
+
+Inference time was under 150ms which makes it convinient for execution on the Edge. Comparing to some GPU cloud service where the inference speed can go under 10ms cost benefit calculation is still on the Edge side since sending of each frame with best possible internet connection would take more than 500ms which makes cloud solution much slower. At the end hosting such solution would cost additional money for computing resources (on AWS for example).
 
 The difference between model accuracy pre- and post-conversion was more less the same.
 
 The size of the model pre- and post-conversion was the same.
 
 The inference time of the model pre- and post-conversion was similar on CPU.
+
 
 ## Assess Model Use Cases
 
